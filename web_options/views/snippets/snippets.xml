@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="snippetone_options" name="Snippet Options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='Box']" position="after">
+            <div data-selector=".media_iframe_video">
+                <we-input string="Url Embeded" class="o_we_large"
+                data-select-attribute="" data-attribute-name="src"
+                data-apply-to="iframe"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

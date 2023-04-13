@@ -1,0 +1,8 @@
+.contenido {
+    &.show-content .texto {
+        display: flex;
+    }
+    &.hidde-content .texto {
+        display: none;
+    }
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="contact_view" model="ir.ui.view">
+        <field name="name">Contact View</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"></field>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                <page name="campaign_info" string="Campaign Info">
+                    <group>
+                        <field name="campaign_ids">
+                            <tree>
+                                <field name="name" string="Name"/>
+                                <field name="campaign_type" string="Type"/>
+                                <field name="delivered" string="Delivered"/>
+                                <field name="delivered_date" string="Delivered Type"/>
+                                <field name="parent_id" string="Parent Campaign"/>
+                            </tree> 
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    
+    <record id="view_campaign_automation" model="ir.ui.view">
+        <field name="name">Campaign Automation_view</field>
+        <field name="model">marketing.campaign</field>
+        <field name="inherit_id" ref="marketing_automation.marketing_campaign_view_form"></field>
+        <field name="arch" type="xml">
+            <field name="unique_field_id" position="after">
+                <field name="campaignVariable_id" ></field>
+            </field>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="tree_campaign">
+        <field name="name">Campaign Tree</field>
+        <field name="model">campaign</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="form_campaign">
+        <field name="name">Campaign Form</field>
+        <field name="model">campaign</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                </header>
+                <sheet>
+                    <div class="row">
+                        <div class="col-6">
+                            <group>
+                                <field name="name" />
+                                <field name="partner_ids" >
+                                    <tree>
+                                        <field name="name" string="Name"/>
+                                    </tree> 
+                                </field>
+                            </group>
+                        </div>
+                        <div class="col-6">
+                            <group>
+                                <field name="campaign_type" />
+                                <field name="delivered" />
+                                <field name="delivered_date" attrs="{'invisible': [('delivered', '=', False)], 'required': [('delivered', '=', True)]}" />
+                                <field name="parent_id" />
+                            </group>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

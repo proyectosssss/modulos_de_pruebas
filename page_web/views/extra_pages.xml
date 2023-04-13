@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <!-- EXTRA PAGE 1 -->
+  <template id="page1" name="page1">
+    <t t-call="website.layout">
+      <p id="y" class="row">rosquilla</p>
+    </t>
+  </template>
+
+    <record id="page1extra" model="website.page">
+      <field name="name">Page1</field>
+      <field name="website_published">True</field>
+      <field name="url">/page1</field>
+      <field name="view_id" ref="page1"/>
+      <field name="website_id" ref="website.default_website"/>
+  </record>
+
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    <template id="form_custom" inherit_id="website.s_website_form" name="Form">
+        <xpath expr="//div[@data-name='Submit Button']" position="after">
+            <div class="mb-3">
+                <div class="g-recaptcha" data-sitekey="6LeUHXklAAAAAKDhCqyERkPN9PjwAjWJXf-FDGDm
+                "></div>
+            </div>
+        </xpath>
+    </template>-->
+
+</odoo>

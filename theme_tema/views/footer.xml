@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="template_id" inherit_id="website.layout" name="template_name">
+        <xpath expr="//footer" position="replace">
+            <footer>
+                New Footer
+            </footer>
+        </xpath>
+    </template>
+</odoo>

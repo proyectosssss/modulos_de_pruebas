@@ -1,0 +1,33 @@
+/*GENERAL*/
+
+.seccion {
+    width: 100vw;
+    height: 80vh;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centro {
+    background-color: grey;
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_foto {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: green;
+}
+
+img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}

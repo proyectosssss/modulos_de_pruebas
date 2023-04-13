@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="snippetone" name="Snippet1">
+        <section class="contenido show-content">
+            <div>
+                <p class="texto">Hi from snippet 1</p>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="theme_tema.custom_page" model="website.page">
+        <field name="name">Custom Page</field>
+        <field name="type">qweb</field>
+        <field name="url">/custom_page</field>
+        <field name="website_indexed" eval="False"/>
+        <field name="is_published">True</field>
+        <field name="key">theme_tema.custom_page</field>
+        <field name="arch" type="xml">
+            <t t-call="website.layout">
+                Hola mundo
+                <!--<div class="oe_structure"/>-->
+            </t>
+        </field>
+    </record>
+    
+
+</odoo>
