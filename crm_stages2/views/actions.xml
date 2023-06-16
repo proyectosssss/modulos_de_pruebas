@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="action_new_stage" model="ir.actions.act_window">
+            <field name="name">New Stage</field>
+            <field name="res_model">new.stage</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_stages"/>
+     </record>
+     
+    <menuitem name="New Stages" id="new_stages" parent="crm.menu_crm_config_lead" action="action_new_stage" sequence="0"/>
+
+     <record id="action_new_lead" model="ir.actions.act_window">
+            <field name="name">New Lead</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">kanban,form,tree</field>
+            <field name="context">{'create': 0}</field>
+            <field name="view_id" ref="view_leads_kanban"/>
+     </record>
+
+    <menuitem name="CRM2" id="new_lead" parent="crm.crm_menu_root" action="action_new_lead" sequence="1"/>
+</odoo>

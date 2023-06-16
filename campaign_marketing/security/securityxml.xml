@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+        <record id="campaign_category" model="ir.module.category">
+            <field name="name">Campaign</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="campaign_category_2" model="ir.module.category">
+            <field name="name">campaign</field>
+            <field name="sequence">1</field>
+            <field name="parent_id" ref ="campaign_category"/>
+        </record>
+
+        <record id="group_campaign_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="campaign_category_2"/>
+        </record>
+        <record id="group_campaign_admin" model="res.groups">
+            <field name="name">Admin</field>
+            <field name="category_id" ref="campaign_category_2"/>
+            <field name="implied_ids" eval="[(4,ref('group_campaign_user'))]"></field>
+        </record>
+   
+</odoo>
